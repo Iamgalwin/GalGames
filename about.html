@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexNerd - About Me</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .about-text-content p {
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 450px;
+            /* Increased height for portrait images */
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .full-width-text {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: justify;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #444;
+            padding: 0 20px;
+        }
+
+        .about-page-header {
+            text-align: center;
+            margin-bottom: 50px;
+            color: #d12211;
+        }
+
+        .about-section-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 120px;
+            background-color: #faf5ed;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="brand">
+            <a href="index.html"
+                style="display:flex; align-items:center; gap:15px; text-decoration:none; color:inherit;">
+                <img src="assets/logo.png" alt="NexNerd Logo" class="logo">
+                <span class="brand-name">NexNerd</span>
+            </a>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="games.html">Games</a>
+            <a href="setup.html">Setup</a>
+            <a href="hello.html">Recommendation</a>
+        </nav>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+    </header>
+
+    <section class="about-section-container">
+        <h2 class="about-page-header">
+            <span class="serif-text" style="font-size: 5.5rem;">A</span><span class="serif-text">BOUT </span><span
+                class="script-text">M</span><span class="serif-text">E</span>
+        </h2>
+
+        <!-- Block 1: Intro - Image Left, Text Right (Paragraph is on the right side) -->
+        <div class="setup-block bg-yellow reveal">
+            <div class="setup-content layout-img-left">
+                <div class="setup-image" style="flex: 0.8;"> <!-- Slight flex adjustment for portrait images -->
+                    <img src="assets/galwin_1.jpg" class="about-image" alt="Galwin Joy">
+                </div>
+                <div class="setup-text about-text-content" style="flex: 1.2;">
+                    <p>Hi, I’m Galwin Joy, and video games have been a huge part of my life for as long as I can
+                        remember. For me, gaming has never been just a way to kill time. It’s something I genuinely
+                        enjoy and feel connected to. Games are more than just entertainment — they’re stories,
+                        challenges, and whole worlds to explore. Over time, gaming has also taught me a lot of things
+                        like patience, problem-solving, and sometimes even how to deal with failure after losing the
+                        same level ten times in a row.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Block 2: Setup/Hardware - Image Right, Text Left (Paragraph is on the left side) -->
+        <div class="setup-block bg-offwhite reveal">
+            <div class="setup-content layout-img-right">
+                <div class="setup-text about-text-content" style="flex: 1.2;">
+                    <p>My interest in games actually started long before I owned my first laptop. Back then, having a
+                        device to play games on felt like a distant dream. I used to watch gameplay videos, read about
+                        games, and imagine what it would feel like to actually play them myself. So when I finally got
+                        my first laptop, it honestly felt like a dream coming true. It wasn’t a powerful gaming machine
+                        or anything fancy, but it didn’t matter — it was my ticket into the gaming world I had been
+                        thinking about for years.</p>
+                </div>
+                <div class="setup-image" style="flex: 0.8;"> <!-- Slight flex adjustment for portrait images -->
+                    <img src="assets/galwin_2.jpg" class="about-image" alt="Galwin Joy setup">
+                </div>
+            </div>
+        </div>
+
+        <!-- Block 3 & 4: Centered Width Below -->
+        <div class="setup-block bg-yellow reveal" style="padding-bottom: 120px;">
+            <div style="display: flex; flex-direction: column; gap: 30px; width: 100%;">
+                <p class="full-width-text">Gaming also helped me during times when I didn’t really have many friends
+                    around to spend time with. Instead of just feeling bored or disconnected, games gave me something to
+                    focus on and enjoy. Exploring different game worlds, completing missions, and learning new mechanics
+                    gave me a sense of purpose and kept my mind active. Over time, gaming became something I’m genuinely
+                    passionate about, and it’s still something I enjoy deeply today.</p>
+
+                <p class="full-width-text">And honestly… I might be a little too passionate about games. I can start a
+                    game “just for 10 minutes” and suddenly it’s 3 AM and I’m still saying “okay one more mission.” I’ve
+                    probably restarted games a hundred times just because I wanted the perfect start. Sometimes I spend
+                    more time tweaking settings and controls than actually playing the game. And yes, I’ve definitely
+                    blamed lag, my controller, and sometimes even the universe for my bad gameplay. But that’s part of
+                    the fun. Gaming is chaotic, frustrating, exciting, and sometimes completely ridiculous — and that’s
+                    exactly why I love it.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Mobile Side Menu -->
+    <div class="mobile-side-menu" id="mobileSideMenu">
+        <button class="close-menu-btn" id="closeMobileMenuBtn">&times;</button>
+        <nav class="mobile-menu-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="games.html">Games</a>
+            <a href="setup.html">Setup</a>
+            <a href="hello.html">Recommendation</a>
+        </nav>
+    </div>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileSideMenu = document.getElementById('mobileSideMenu');
+        const closeMobileMenuBtn = document.getElementById('closeMobileMenuBtn');
+
+        if (mobileMenuBtn && mobileSideMenu && closeMobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileSideMenu.classList.add('open');
+            });
+
+            closeMobileMenuBtn.addEventListener('click', () => {
+                mobileSideMenu.classList.remove('open');
+            });
+        }
+
+        // Scroll Reveal Animation
+        function reveal() {
+            var reveals = document.querySelectorAll('.reveal');
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add('active');
+                }
+            }
+        }
+        window.addEventListener('scroll', reveal);
+        // Trigger once on load
+        reveal();
+    </script>
+</body>
+
+</html>

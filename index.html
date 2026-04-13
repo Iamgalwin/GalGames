@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexNerd - Explore Games</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="brand">
+            <img src="assets/logo.jpeg" alt="GalGames Logo" class="logo">
+            <span class="brand-name">GalGame's</span>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="games.html">Games</a>
+            <a href="setup.html">Setup</a>
+            <a href="hello.html">Recommendation</a>
+        </nav>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+    </header>
+
+    <main class="hero">
+        <div class="hero-left">
+            <h1 class="hero-title">Explore GalGame's</h1>
+            <div class="games-showcase">
+                <img src="assets/shooter1.png" alt="Space Shooter Game" class="game-img img-1">
+                <img src="assets/shooter2.png" alt="Retro Shooter" class="game-img img-2">
+            </div>
+        </div>
+        <div class="hero-right">
+            <!-- Background image in CSS -->
+        </div>
+    </main>
+
+    <section class="about-section reveal">
+        <h2 class="section-title">About Me</h2>
+        <h3 class="section-subtitle">My Passion for Video Games</h3>
+        <p class="section-text">
+            I am deeply passionate about video games, viewing them as a profound medium where imagination meets
+            interactive storytelling. From playing retro arcade classics to exploring the most advanced modern
+            masterpieces, gaming is more than just a hobby—it's an essential part of my life. Every game is a new
+            adventure, and through NexNerd, I'm excited to share my experiences, insights, and favorite universes with
+            the vibrant gaming community.
+        </p>
+        <a href="about.html" class="learn-more-btn">Learn More</a>
+    </section>
+
+    <section class="top-picks-section reveal">
+        <h2 class="top-picks-title">
+            <span class="script-text">M</span><span class="serif-text">Y TOP 3 </span><span
+                class="script-text">P</span><span class="serif-text">ICKS</span>
+        </h2>
+        <div class="picks-grid">
+            <div class="pick-card">
+                <div class="pick-image-container">
+                    <img src="assets/oriWW.jpg" alt="Ori and the Will of the Wisps">
+                </div>
+                <h4 class="pick-title">Ori and the Will of the Wisps</h4>
+            </div>
+            <div class="pick-card">
+                <div class="pick-image-container">
+                    <img src="assets/hollow_knight.jpg" alt="Hollow Knight">
+                </div>
+                <h4 class="pick-title">Hollow Knight</h4>
+            </div>
+            <div class="pick-card">
+                <div class="pick-image-container">
+                    <img src="assets/batmanAK.jpg" alt="Batman: Arkham Knights">
+                </div>
+                <h4 class="pick-title">Batman: Arkham Knight</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile Side Menu -->
+    <div class="mobile-side-menu" id="mobileSideMenu">
+        <button class="close-menu-btn" id="closeMobileMenuBtn">&times;</button>
+        <nav class="mobile-menu-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="games.html">Games</a>
+            <a href="setup.html">Setup</a>
+            <a href="hello.html">Recommendation</a>
+        </nav>
+    </div>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileSideMenu = document.getElementById('mobileSideMenu');
+        const closeMobileMenuBtn = document.getElementById('closeMobileMenuBtn');
+
+        if (mobileMenuBtn && mobileSideMenu && closeMobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileSideMenu.classList.add('open');
+            });
+
+            closeMobileMenuBtn.addEventListener('click', () => {
+                mobileSideMenu.classList.remove('open');
+            });
+        }
+
+        // Scroll Reveal Animation
+        function reveal() {
+            var reveals = document.querySelectorAll('.reveal');
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add('active');
+                }
+            }
+        }
+        window.addEventListener('scroll', reveal);
+        // Trigger once on load
+        reveal();
+    </script>
+</body>
+
+</html>
